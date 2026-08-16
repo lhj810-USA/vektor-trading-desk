@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root { color-scheme: dark; }
+html, body, #root { height: 100%; margin: 0; background: #0b0e11; }
+body { font-family: "JetBrains Mono", ui-monospace, monospace; -webkit-font-smoothing: antialiased; overscroll-behavior: none; user-select: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+@keyframes flash-green { 0% { box-shadow: 0 0 0 0 rgba(14,203,129,0.7); background-color: rgba(14,203,129,0.25); } 100% { box-shadow: 0 0 0 18px rgba(14,203,129,0); background-color: transparent; } }
+.win-flash { animation: flash-green 0.9s ease-out; }
+@keyframes slide-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.pos-enter { animation: slide-up 0.25s ease-out; }
